@@ -13,6 +13,9 @@
     "open": "http-server -c-1 dist/static -o",
     "renew": "npm run build && npm run scully && npm run open"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.2",
@@ -26,6 +29,7 @@
     "@scullyio/init": "^0.0.23",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "papercss": "^1.6.1",
     "prismjs": "^1.19.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
