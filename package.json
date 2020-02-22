@@ -14,9 +14,6 @@
     "deploy": "ng build blogui --prod && npm run scully",
     "renew": "npm run build && npm run scully && npm run open"
   },
-  "engines": {
-    "node": ">=12"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.2",
