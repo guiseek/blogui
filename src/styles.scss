@@ -3,5 +3,48 @@
 /* include CSS for prism toolbar */
 // @import '~prismjs/plugins/toolbar/prism-toolbar.css';
 /* check node_modules/prismjs/themes/ for the available themes */
-@import '~prismjs/themes/prism-coy';
-@import '~papercss/dist/paper.min';
+@import "~prismjs/themes/prism-coy";
+@import "~papercss/dist/paper.min";
+
+$danger: #da534b;
+$gray: #41403e;
+
+.text-danger {
+  color: $danger;
+}
+.form-group .text-danger {
+  position: absolute;
+}
+
+.form-group {
+  position: relative;
+
+  input {
+    border-color: $gray;
+    transition: 800ms border-color linear;
+
+    & + .error {
+      opacity: 0;
+      transition: 800ms opacity linear;
+
+      position: absolute;
+      bottom: -1.3rem;
+      font-size: 1rem;
+      left: 0.2rem;
+      color: $danger;
+    }
+
+    &.ng-invalid.ng-touched.ng-dirty {
+      border-color: $danger;
+
+      & + .error {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-control-button {
+  display: flex;
+  margin-bottom: 6px;
+}

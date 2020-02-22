@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: calc(100% + 4px);
+  margin-left: -2px;
+  height: 88px;
+  border: 2px solid #41403e;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+}
+
+:host nav svg.ui-bg {
+  color: #fff;
+  border: unset;
+  height: 64px;
+  path {
+    background-color: #1976d2;
+    background: linear-gradient(145deg, #0d47a1, #42a5f5);
+  }
+}

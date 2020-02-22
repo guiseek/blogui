@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+
+    <h4 class="card-title">Mantenha-se atualizado!</h4>
+
+    <div class="form-group">
+      <label for="paperInputs2" class="card-subtitle" aria-label="Endereço de email">
+        Endereço de email para notificação.
+      </label>
+
+      <div class="form-control-button">
+        <input class="col-fill input-block" type="email" (keyup.enter)="onSubscribe()" placeholder="Seu endereço de email" tabindex="1" [formControl]="email"
+          id="paperInputs2">
+          <span class="error">Endereço de email inválido</span>
+        <button tabindex="2" role="button" class="col btn-small" (click)="onSubscribe()">Inscrever</button>
+      </div>
+      <!-- <span *ngIf="showError(email) && isSubmitted" class="text-danger">Endereço inválido</span> -->
+    </div>
+  </div>
+</div>
+
+
+<pre>{{email.value | json}}</pre>
