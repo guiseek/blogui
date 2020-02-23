@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-Firebase">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="Firebase" clip-path="url(#clip-Firebase)">
+    <g id="Logo" transform="translate(-176 130.776)">
+      <path id="Caminho_1" data-name="Caminho 1" d="M5.8,415.941,8.914,411.6l146.9-278.666.311-2.949L91.374,8.365A12.016,12.016,0,0,0,68.9,12.157Z" transform="translate(240.2 -132.776)" fill="#ffc24a"/>
+      <path id="Caminho_2" data-name="Caminho 2" d="M5.9,410.628l2.344-4.579L153.622,130.277,89.038,8.18a10.99,10.99,0,0,0-20.752,3.773Z" transform="translate(241.932 -130.76)" fill="#ffa712"/>
+      <path id="Caminho_3" data-name="Caminho 3" d="M61.659,153.9l48.209-49.454L61.64,12.481a12.418,12.418,0,0,0-21.888,0L13.981,61.605V65.8Z" transform="translate(381.419 -64.707)" fill="#f4bd62"/>
+      <path id="Caminho_4" data-name="Caminho 4" d="M60.347,150.213l46.872-47.989L60.347,12.84a10.788,10.788,0,0,0-19.672-.861l-25.9,49.985-.769,2.546Z" transform="translate(381.872 -63.033)" fill="#ffa50e"/>
+      <path id="Caminho_5" data-name="Caminho 5" d="M5.8,295.516l1.41-1.429,5.11-2.07,187.926-187.23L202.63,98.3,155.758,8.956Z" transform="translate(240.235 -12.912)" fill="#f6820c"/>
+      <path id="Caminho_6" data-name="Caminho 6" d="M208.881,410.417,378.627,315.8l-48.5-298.37A11.606,11.606,0,0,0,310.476,11.1L5.8,316.216,174.541,410.4a35.227,35.227,0,0,0,34.322,0" transform="translate(240.2 -33.83)" fill="#fde068"/>
+      <path id="Caminho_7" data-name="Caminho 7" d="M375.339,314.437l-48.1-296.872A10.175,10.175,0,0,0,309.565,11.1L5.9,315.078l166.873,93.414a34.874,34.874,0,0,0,34.047,0Z" transform="translate(241.932 -33.51)" fill="#fcca3f"/>
+      <path id="Caminho_8" data-name="Caminho 8" d="M208.881,119a35.149,35.149,0,0,1-34.322,0L7.189,25.994,5.8,27.423l168.741,94.421a35.149,35.149,0,0,0,34.322,0L378.627,27l-.42-2.564Z" transform="translate(240.2 254.713)" fill="#eeab37"/>
+    </g>
+  </g>
+</svg>

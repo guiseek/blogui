@@ -169,8 +169,30 @@ If markdown is too limiting, you can just insert your own <strike>crazy</strike>
 It is a pity, but markdown does **not** work in here for most markdown parsers.  [Marked] handles it pretty well.
 </div>
 
+---
+
+Schemas para usar no Blog
+
+Release 6.0
+- https://schema.org/docs/releases.html#v6.0
+
+- https://schema.org/version/3.6/schema-all.html#term_NewsMediaOrganization
+
+- https://schema.org/version/3.6/#term_Article
+
+- https://schema.org/version/3.6/#term_Chapter
+
+- https://schema.org/version/3.6/#term_PublicationIssue
+
+- https://schema.org/version/3.6/#term_PublicationVolume
+
+- https://schema.org/version/3.6/schema-all.html#term_Comment
+ - https://schema.org/version/3.6/#term_resultComment
+ - https://schema.org/version/3.6/#term_downvoteCount
+ - https://schema.org/version/3.6/#term_upvoteCount
 
 
+- https://schema.org/version/3.6/schema-all.html#term_ProfilePage
 
 ---
 

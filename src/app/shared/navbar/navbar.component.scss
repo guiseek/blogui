@@ -1,22 +1,30 @@
+@import "src/styles/mixins";
+
 uig-navbar {
   display: block;
-  width: calc(100% + 4px);
-  margin-left: -2px;
-  height: 88px;
-  border: 2px solid #41403e;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
+  width: 100%;
+  uig-logo {
+    height: 64px;
+  }
 }
-uig-navbar .nav-brand svg {
+
+uig-navbar .nav-logo svg {
   display: inline-block;
-  height: 64px;
+  height: 58px;
+  width: auto;
 }
-uig-navbar nav svg.ui-bg {
-  color: #fff;
-  border: unset;
-  height: 64px;
-  path {
-    background-color: #1976d2;
-    background: linear-gradient(145deg, #0d47a1, #42a5f5);
+
+uig-navbar {
+  @include media(medium) {
+    .nav-brand {
+      display: none;
+    }
+    > nav div {
+      margin: 0 0.2rem;
+    }
+    .nav-logo {
+      height: 55px;
+      display: block;
+    }
   }
 }
