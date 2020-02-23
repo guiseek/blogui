@@ -13,7 +13,7 @@
     "scully:serve": "scully serve",
     "open": "http-server -c-1 dist/static -o",
     "deploy": "npm run prod && npm run scully",
-    "renew": "npm run prod && npm run scully && npm run open"
+    "renew": "npm run build && npm run scully && npm run open"
   },
   "private": true,
   "dependencies": {
