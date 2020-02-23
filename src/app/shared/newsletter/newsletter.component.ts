@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { UigFormControl } from '../forms/form-control';
 // import { UigFormControl } from '../forms/form-control';
 
 @Component({
@@ -13,14 +14,14 @@ export class NewsletterComponent {
   @Output() subscribe = new EventEmitter<string>();
   isSubmitted = false;
 
-  email = new FormControl({
-    value: '',
-    disabled: true,
+  email = new UigFormControl({
+    formState: '',
+    validatorOrOpts: [
+      Validators.required,
+      Validators.email
+    ],
     updateOn: 'blur'
-  }, [
-    Validators.required,
-    Validators.email
-  ]);
+  });
 
   showError({ touched, dirty, invalid }) {
     return touched && dirty && invalid;

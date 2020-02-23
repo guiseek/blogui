@@ -1,51 +1,34 @@
-:host {
-  display: block;
-  background-image: url('/assets/images/geometry-pattern.png');
-}
+@import "src/styles/mixins";
 
-#top {
-  max-width: 1440px;
-}
-.demo .row .col {
-  background-color: #eee;
-}
-.demo .row .col:nth-child(even) {
-  background-color: #ddd;
-}
-.docs {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.summary a {
-  color: #41403e;
-}
-img.no-responsive {
-  max-width: -webkit-fill-available;
-  max-width: -moz-available;
-}
-.to-top {
-  opacity: 1;
-  display: inline-block;
-  padding: 1em;
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-}
-.to-top .paper-btn {
-  padding: 0.6em 1em;
-  background: #fff;
-  border-top-left-radius: 185px 160px;
-  border-top-right-radius: 200px 195px;
-  border-bottom-right-radius: 160px 195px;
-  border-bottom-left-radius: 185px 190px;
-}
-.demo-title:hover + .to-top {
-  opacity: 0;
-}
-.sidebar-title a {
-  color: inherit;
-  background: none;
-}
-.collapsible.full-width {
-  width: 100%;
+:host {
+  .techs {
+    .card {
+      margin: 16px;
+      max-width: 12rem;
+
+      figure {
+        height: 156px;
+        display: flex;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-size: 2rem;
+      color: #41403e;
+      // background-image: none;
+      opacity: 0.6;
+      margin: 0.6rem 0;
+      transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+        //   border-color: $blue;
+      }
+    }
+  }
 }
