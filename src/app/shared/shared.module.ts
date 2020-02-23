@@ -4,13 +4,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SignComponent } from './sign/sign.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
     NewsletterComponent,
-    SignComponent
+    SignComponent,
+    LogoComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,9 @@ import { SignComponent } from './sign/sign.component';
   exports: [
     NavbarComponent,
     NewsletterComponent,
-    SignComponent
-  ]
+    SignComponent,
+    LogoComponent
+  ],
+  entryComponents: [LogoComponent]
 })
 export class SharedModule { }

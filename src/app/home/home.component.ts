@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'uig-home',
@@ -8,15 +9,19 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  links$: Observable<any> = this.scully.available$;
+  links$: Observable<ScullyRoute[]>;
 
-  constructor(private scully: ScullyRoutesService) {}
+  constructor(private scully: ScullyRoutesService) { }
 
   ngOnInit(): void {
     // debug current pages
-    this.links$.subscribe(links => {
-      console.log(links);
-    });
+    this.links$ = this.scully.available$
+      .pipe(
+        map(links => links.filter((link => !!link && link.title))),
+        tap(a => {
+          console.log(a)
+        })
+      );
   }
 
 }

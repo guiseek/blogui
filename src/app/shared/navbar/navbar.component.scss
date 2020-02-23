@@ -1,4 +1,4 @@
-:host {
+uig-navbar {
   display: block;
   width: calc(100% + 4px);
   margin-left: -2px;
@@ -7,8 +7,11 @@
   border-bottom-left-radius: 15px 255px;
   border-bottom-right-radius: 225px 15px;
 }
-
-:host nav svg.ui-bg {
+uig-navbar .nav-brand svg {
+  display: inline-block;
+  height: 64px;
+}
+uig-navbar nav svg.ui-bg {
   color: #fff;
   border: unset;
   height: 64px;
