@@ -1,1 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* include CSS for prism toolbar */
+// @import '~prismjs/plugins/toolbar/prism-toolbar.css';
+/* check node_modules/prismjs/themes/ for the available themes */
+@import "~prismjs/themes/prism-coy";
+@import "~papercss/dist/paper.min";
+
+@import "styles/mixins";
+
+$blue: #0071de;
+$danger: #da534b;
+$gray: #41403e;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  background-image: url("/assets/images/geometry-pattern.png");
+  padding-top: 70px;
+}
+#top {
+  max-width: 1440px;
+}
+
+.paper > h1,
+h2,
+h3,
+h4 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.site {
+  margin-left: auto;
+  margin-right: auto;
+}
+.paper.contents {
+  ul {
+    padding-left: 16px;
+    li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.border-radius {
+  border-top-left-radius: 185px 160px;
+  border-top-right-radius: 200px 195px;
+  border-bottom-right-radius: 160px 195px;
+  border-bottom-left-radius: 185px 190px;
+}
+
+.to-top {
+  opacity: 1;
+  display: inline-block;
+  padding: 1em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+.to-top .paper-btn {
+  padding: 0.6em 1em;
+  background: #fff;
+  border-top-left-radius: 185px 160px;
+  border-top-right-radius: 200px 195px;
+  border-bottom-right-radius: 160px 195px;
+  border-bottom-left-radius: 185px 190px;
+}
+
+.summary a {
+  color: #41403e;
+}
+
+.about-title:hover + .to-top {
+  opacity: 0;
+}
+.sidebar-title a {
+  color: inherit;
+  background: none;
+}
+.collapsible.full-width {
+  width: 100%;
+}
+.text-danger {
+  color: $danger;
+}
+.text-blue {
+  color: $blue;
+}
+.form-group .text-danger {
+  position: absolute;
+}
+
+.form-group {
+  position: relative;
+
+  input {
+    border-color: $gray;
+    transition: 800ms border-color linear;
+
+    & + .error {
+      opacity: 0;
+      transition: 800ms opacity linear;
+
+      position: absolute;
+      bottom: -1.3rem;
+      font-size: 1rem;
+      left: 0.2rem;
+      color: $danger;
+    }
+
+    &.ng-invalid.ng-touched.ng-dirty {
+      border-color: $danger;
+
+      & + .error {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-control-button {
+  display: flex;
+  margin-bottom: 6px;
+}

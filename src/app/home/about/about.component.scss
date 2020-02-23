@@ -1,0 +1,34 @@
+@import "src/styles/mixins";
+
+:host {
+  .techs {
+    .card {
+      margin: 16px;
+      max-width: 12rem;
+
+      figure {
+        height: 156px;
+        display: flex;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-size: 2rem;
+      color: #41403e;
+      // background-image: none;
+      opacity: 0.6;
+      margin: 0.6rem 0;
+      transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+        //   border-color: $blue;
+      }
+    }
+  }
+}

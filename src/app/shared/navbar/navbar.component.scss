@@ -1,0 +1,30 @@
+@import "src/styles/mixins";
+
+uig-navbar {
+  display: block;
+  width: 100%;
+  uig-logo {
+    height: 64px;
+  }
+}
+
+uig-navbar .nav-logo svg {
+  display: inline-block;
+  height: 58px;
+  width: auto;
+}
+
+uig-navbar {
+  @include media(medium) {
+    .nav-brand {
+      display: none;
+    }
+    > nav div {
+      margin: 0 0.2rem;
+    }
+    .nav-logo {
+      height: 55px;
+      display: block;
+    }
+  }
+}

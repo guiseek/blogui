@@ -5,11 +5,15 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prod": "ng build blogui --buildOptimizer --extractCss --extractLicenses --no-namedChunks --optimization --outputHashing=all --no-sourceMap --no-vendorChunk",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "open": "http-server -c-1 dist/static -o",
+    "deploy": "npm run prod && npm run scully",
+    "renew": "npm run build && npm run scully && npm run open"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +28,8 @@
     "@scullyio/init": "^0.0.23",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "papercss": "^1.6.1",
+    "prismjs": "^1.19.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

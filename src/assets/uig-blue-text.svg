@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-logo">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <g id="Grupo_1" data-name="Grupo 1" transform="translate(0.9 0)">
+      <path id="União_1" data-name="União 1" d="M36.437,402.062,0,86.19,238,1.318V0L476.893,85.19,440.456,401.063,238.892,512.7V514.2Z" transform="translate(17.1 -1)" fill="#0d6fd1"/>
+    </g>
+    <path id="Caminho_2" data-name="Caminho 2" d="M363.893,30V346.642h0V543.2h0L161.437,431.062,125,115.19Z" transform="translate(-106.9 -31)" fill="#1976d2"/>
+    <text id="G" transform="translate(67 431)" fill="#fff" font-size="450" font-family="Futura-Medium, Futura" font-weight="500"><tspan x="0" y="0">G</tspan></text>
+  </g>
+</svg>

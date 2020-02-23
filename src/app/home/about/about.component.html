@@ -1,0 +1,89 @@
+<uig-navbar>
+
+  <uig-logo></uig-logo>
+
+</uig-navbar>
+
+<div itemscope itemtype="http://schema.org/AboutPage" id="top" class="row site">
+  <div class="sm-12 md-8 col">
+    <div class="paper">
+      <div class="about-title">
+        <div class="row flex-center">
+
+          <div class="text-center">
+            <h2>Anotações pra quem busca tecnologia</h2>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Tecnologias que verão por aqui</h3>
+
+          <div class="row flex-spaces techs">
+
+            <div class="card" *ngFor="let tech of logos">
+
+              <figure>
+                <img [src]="tech.logo" [attr.alt]="tech.title ? tech.title : 'Logo'" />
+              </figure>
+
+              <div class="card-body">
+                <h4 class="card-title">{{tech.title}}!</h4>
+                <!-- <h5 class="card-subtitle">Nice looking subtitle.</h5> -->
+                <!-- <p class="card-text">Notice that the card width in this example have been set to 20rem, otherwise it will try to fill the current container/row where the card is.</p> -->
+                <a [attr.href]="tech.url" target="_blank" rel="nofollow">
+                  Documentação oficial
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="to-top">
+          <a href="/sobre#top" class="paper-btn margin">^</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div itemprop="ownershipFundingInfo" class="sm-12 md-4 col sidebar">
+
+    <div class="paper">
+      <h3 class="sidebar-title" style="text-align:center">
+        Autor
+      </h3>
+
+      <img src="/assets/images/guiseek-devparana.jpg" alt="float-left">
+      <h4>
+        Meu nome é Guilherme Siquinelli,
+        <br>
+        <span style="font-size: 80%" class="text-secondary">mas podem me chamar de @guiseek!</span>
+      </h4>
+
+      <p>
+        Venho estudado tecnologia por mais de uma década, principalmente Javascript!
+        Vamos testar novidades e apresentar tecnologias já estabelecidas no mercado.
+      </p>
+
+
+      <div itemscope itemtype="http://schema.org/SocialMediaPosting" class="row flex-center social-links">
+        <a itemprop="url" href="https://twitter.com/guiseek" rel="noreferrer" target="_blank">
+          <i itemprop="url" class="fab fa-twitter"></i>
+        </a>
+        <a itemprop="url" href="https://github.com/guiseek" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a itemprop="url" href="https://pt.stackoverflow.com/users/18521/gui-seek" target="_blank">
+          <i class="fab fa-stack-overflow"></i>
+        </a>
+        <a itemprop="url" href="https://www.linkedin.com/in/guilherme-siquinelli-2012a668" target="_blank"
+          rel="nofollow">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a itemprop="url" href="https://www.npmjs.com/~guiseek" target="_blank" rel="nofollow">
+          <i class="fab fa-npm"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
