@@ -1,9 +1,10 @@
 ---
-title: PWA em iPhone iPad e Ipod
-description: blog description
-publish: false
+title: 'PWA em iPhone iPad e Ipod'
+description: 'Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?'
+author: 'Guilherme Siquinelli'
+published: true
+date: 2020-02-20
 ---
-# Web Apps em dispositivos Apple
 
 Fala aí estudantes de tecnologia, bom dia, boa tarde, boa noite!
 
@@ -11,7 +12,8 @@ Você tem dispositivo Android ou Apple? quem sabe os dois, como é meu caso. Se 
 
 Porém, ele permite que o app seja adicionado a tela inicial e podendo depois disso ser iniciados sem a interface estranha do safari, sendo assim ele suporta pwa mas infelizmente falta esse detalhe muito importante, que é solicitar de forma automática.
 
-> info **Pergunta** Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?
+> **Pergunta** Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?
+
 
 ### Requisitos
 
@@ -31,7 +33,7 @@ Precisamos de um **componente**, um **serviço** e um **banco de dados**.
 
 Tendo isso, fazemos a chamada do serviço no bootstrap na aplicação.
 
-> alert **Pré-requisitos** Tenho como premissa que você como estudioso e caiu aqui com esta dúvida, já tenha um app funcional e sendo assim talvez seja necessária apenas uma instalação que usaremos de banco. O **IDB-Keyval**.
+> **Pré-requisitos** Tenho como premissa que você como estudioso e caiu aqui com esta dúvida, já tenha um app funcional e sendo assim talvez seja necessária apenas uma instalação que usaremos de banco. O **IDB-Keyval**.
 
 ```sh
 $ npm i idb-keyval

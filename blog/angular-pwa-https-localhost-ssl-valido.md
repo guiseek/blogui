@@ -1,10 +1,15 @@
 ---
-title: 'PWA com certificado SSL válido no desenvolvimento'
-description: 'HTTPS em localhost. Full-stack App com Angular e NestJS'
-author: 'Guilherme Siquinelli'
-published: false
-date: 2020-02-18T00:00:00.000Z
+title: Angular PWA HTTPS localhost SSL válido
+description: blog description
+author: Guilherme Siquinelli
+date: 2020-02-23
+slugs:
+  - pwa-ssl-valido
+  - pwa-com-certificado-ssl-valido-em-desenvolvimento
+  - angular-https-localhost-certificado-valido
+published: true
 ---
+
 Com um projeto criado, seja `Vanilla`, `Angular`, `React`, `Vue`, `Svelte`, `Node`, `Express`, `NestJS`... podemos criar os certificados usando os comandos a seguir:
 
 ### Gerando um certificado

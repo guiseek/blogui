@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'uig-posts',
@@ -17,10 +17,7 @@ export class PostsComponent implements OnInit {
     // debug current pages
     this.links$ = this.scully.available$
       .pipe(
-        map(links => links.filter((link => !!link && link.title))),
-        tap(a => {
-          console.log(a);
-        })
+        map(links => links.filter((link => !!link && link.published)))
       );
   }
 
