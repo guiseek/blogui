@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prod": "ng build blogui --buildOptimizer --extractCss --extractLicenses --no-namedChunks --optimization --outputHashing=all --no-sourceMap --no-vendorChunk",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -12,7 +13,7 @@
     "scully:serve": "scully serve",
     "open": "http-server -c-1 dist/static -o",
     "deploy": "ng build blogui --prod && npm run scully",
-    "renew": "npm run build && npm run scully && npm run open"
+    "renew": "npm run prod && npm run scully && npm run open"
   },
   "private": true,
   "dependencies": {
