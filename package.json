@@ -12,7 +12,7 @@
     "scully": "scully",
     "scully:serve": "scully serve",
     "open": "http-server -c-1 dist/static -o",
-    "deploy": "ng build blogui --prod && npm run scully",
+    "deploy": "npm run prod && npm run scully",
     "renew": "npm run prod && npm run scully && npm run open"
   },
   "private": true,
