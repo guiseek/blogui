@@ -1,0 +1,74 @@
+[
+  {
+    "logo": "angular.svg",
+    "docs": "https://angular.io",
+    "name": "Angular",
+    "desc": "Angular"
+  },
+  {
+    "logo": "pwa.svg",
+    "docs": "https://www.w3.org/TR/appmanifest",
+    "name": "PWA",
+    "desc": "PWA"
+  },
+  {
+    "logo": "ionic.svg",
+    "docs": "https://ionicframework.com",
+    "name": "Ionic",
+    "desc": "Ionic"
+  },
+  {
+    "logo": "npm.svg",
+    "docs": "https://npmjs.com",
+    "name": "NPM",
+    "desc": "NPM"
+  },
+  {
+    "logo": "html.svg",
+    "docs": "https://www.w3.org/TR/html52",
+    "name": "HTML",
+    "desc": "HTML"
+  },
+  {
+    "logo": "css.svg",
+    "docs": "https://www.w3.org/TR/css",
+    "name": "CSS",
+    "desc": "CSS"
+  },
+  {
+    "logo": "js.svg",
+    "docs": "https://www.w3.org/standards/webdesign/script",
+    "name": "Javascript",
+    "desc": "Javascript"
+  },
+  {
+    "logo": "ts.svg",
+    "docs": "http://www.typescriptlang.org",
+    "name": "Typescript",
+    "desc": "Typescript"
+  },
+  {
+    "logo": "nodejs.svg",
+    "docs": "https://nodejs.org/",
+    "name": "NodeJS",
+    "desc": "NodeJS"
+  },
+  {
+    "logo": "nestjs.svg",
+    "docs": "https://nestjs.com",
+    "name": "NestJS",
+    "desc": "NestJS"
+  },
+  {
+    "logo": "firebase.svg",
+    "docs": "https://firebase.com",
+    "name": "Firebase",
+    "desc": "Firebase"
+  },
+  {
+    "logo": "nx.svg",
+    "docs": "https://firebase.com",
+    "name": "NX Workspaces",
+    "desc": "NX Workspaces"
+  }
+]

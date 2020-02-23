@@ -6,16 +6,66 @@
 
 <div id="top" class="row site">
   <div class="sm-12 md-8 col">
-    <div class="paper">
-      <div class="demo-title">
-        <h3>Conteúdo público</h3>
+
+    <article itemscope itemtype="http://schema.org/Article" id="top" class="site">
+      <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper"
+        *ngIf="!!latest">
+
+        <h3 itemprop="headline">
+          <a href="#">{{latest.title}}</a>
+        </h3>
+        <div class="text-muted">
+          Escrito por <a itemprop="author" href="#">{{latest.author}}</a> em <span
+            itemprop="datePublished">{{latest.date | date:'longDate'}}</span>.
+        </div>
+        <p>{{latest.description}}</p>
       </div>
 
+      <div class="row flex-center">
+        <img class="no-border" src="/assets/images/new-content.svg" alt="">
+      </div>
+    </article>
 
-      <blockquote>
-        <strong>Alerta</strong>
-        tudo bem?
-      </blockquote>
+    <div class="paper">
+
+      <h3>Tecnologias</h3>
+
+      <div class="row flex-spaces child-borders">
+        <div class="sm-3 col margin">
+          <img src="/assets/logos/angular.svg" alt="Angular">
+        </div>
+        <div class="sm-3 col margin">
+          <img src="/assets/logos/firebase.svg" alt="Angular">
+        </div>
+        <div class="sm-3 col margin">
+          <img src="/assets/logos/nestjs.svg" alt="Angular">
+        </div>
+      </div>
+      <hr>
+      <section>
+
+        <table class="table-hover">
+          <thead>
+            <tr>
+              <th>Tech</th>
+              <th></th>
+              <th>Docs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let t of tech$ | async">
+              <td>{{t.name}}</td>
+              <td>{{t.desc}}</td>
+              <td>
+                <a [attr.href]="t.docs" target="_blank" [attr.aria-label]="t.name">
+                  Link
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
     </div>
   </div>
   <div class="sm-12 md-4 col sidebar">
