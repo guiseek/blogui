@@ -5,6 +5,13 @@ import { map, tap } from 'rxjs/operators';
 import { Tech } from './../shared/models/tech.model';
 import { TechService } from './../shared/services/tech.service';
 
+const toTime = (date: string) => {
+  return new Date(date).getTime();
+};
+const byDate = (a: ScullyRoute, b: ScullyRoute) => {
+  return toTime(a.date) - toTime(b.date);
+};
+
 @Component({
   selector: 'uig-home',
   templateUrl: './home.component.html',
@@ -23,11 +30,12 @@ export class HomeComponent implements OnInit {
     // debug current pages
     this.links$ = this.scully.available$
       .pipe(
-        map(links => links.filter(link => link.published)),
+        map(links =>
+          links.filter(link => link.published)),
+        // map(posts => posts.sort((a, b) => toTime(a.date) - toTime(b.date))),
+        map(posts => posts.sort( byDate ).reverse()),
         map(posts => {
-          if (!this.latest) {
-            this.latest = posts.shift();
-          }
+          this.latest = posts[0];
           return posts;
         }),
         tap(a => {
