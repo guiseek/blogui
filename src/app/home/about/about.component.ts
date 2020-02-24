@@ -6,13 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  constructor() {
+
+  }
   logos = [
     { logo: '/assets/logos/angular.svg', url: 'https://angular.io', title: 'Angular' },
     { logo: '/assets/logos/pwa.svg', url: 'https://www.w3.org/TR/appmanifest', title: 'PWA' },
     { logo: '/assets/logos/ionic.svg', url: 'https://ionicframework.com', title: 'Ionic' },
     { logo: '/assets/logos/npm.svg', url: 'https://npmjs.com', title: 'NPM' },
-    { logo: '/assets/logos/html5.svg', url: 'https://www.w3.org/TR/html52', title: 'HTML' },
-    { logo: '/assets/logos/css3.svg', url: 'https://www.w3.org/TR/css', title: 'CSS' },
+    { logo: '/assets/logos/html.svg', url: 'https://www.w3.org/TR/html52', title: 'HTML' },
+    { logo: '/assets/logos/css.svg', url: 'https://www.w3.org/TR/css', title: 'CSS' },
     { logo: '/assets/logos/js.svg', url: 'https://www.w3.org/standards/webdesign/script', title: 'Javascript' },
     { logo: '/assets/logos/ts.svg', url: 'http://www.typescriptlang.org', title: 'Typescript' },
     { logo: '/assets/logos/nodejs.svg', url: 'https://nodejs.org/', title: 'NodeJS' },

@@ -1,3 +1,8 @@
 :host .sidebar {
   margin-bottom: 16px;
 }
+:host .home-header {
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+}

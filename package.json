@@ -11,9 +11,11 @@
     "e2e": "ng e2e",
     "scully": "scully",
     "scully:serve": "scully serve",
+    "post": "ng g @scullyio/init:post --metaDataFile='blog-meta-data.yaml' --name",
     "open": "http-server -c-1 dist/static -o",
     "deploy": "npm run prod && npm run scully",
-    "renew": "npm run build && npm run scully && npm run open"
+    "renew": "npm run build && npm run scully && npm run open",
+    "init": "./init-post.sh"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +30,7 @@
     "@scullyio/init": "^0.0.23",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "clean-css": "4.1.11",
     "papercss": "^1.6.1",
     "prismjs": "^1.19.0",
     "rxjs": "~6.5.4",

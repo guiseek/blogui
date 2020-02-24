@@ -24,7 +24,49 @@ body {
 #top {
   max-width: 1440px;
 }
+blockquote {
+  background: #deefff;
+  border-left: 10px solid $blue;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: $blue;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote > p {
+  display: inline-block;
+}
+blockquote strong {
+  display: inline-block;
+  color: $blue;
+}
 
+// blockquote {
+//   color: $gray;
+//   background-color: #f5f0c6;
+//   border-color: #ddcd45;
+//   border-left-width: 4px;
+//   border-bottom-left-radius: 15px 255px;
+//   border-bottom-right-radius: 225px 15px;
+//   border-top-left-radius: 255px 15px;
+//   border-top-right-radius: 15px 225px;
+//   border: 2px solid #41403e;
+//   margin-bottom: 20px;
+//   padding: 15px;
+//   width: 100%;
+//   strong:first-of-type {
+//     display: block;
+//     text-transform: uppercase;
+//     font-size: 15px;
+//     font-weight: 700;
+//   }
+// }
 .paper > h1,
 h2,
 h3,

@@ -4,20 +4,31 @@
 
 </uig-navbar>
 
-<div itemscope itemtype="http://schema.org/Article" id="top" class="site">
+<article itemscope itemtype="http://schema.org/Article" id="top" class="site">
 
-  <h3 itemprop="pageStart">Boa leitura</h3>
-  <hr>
+  <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper"
+    *ngIf="post$ | async as post;">
 
+    <h1 itemprop="headline" class="article-title">
+      <a href="#">{{post.title}}</a>
+    </h1>
 
-  <div itemprop="articleSection" class="paper">
-    <!-- This is where Scully will inject the static HTML -->
-    <scully-content></scully-content>
+    <p class="article-meta">
+      Escrito por <a itemprop="author" href="#">{{post.author}}</a> em <span
+        itemprop="datePublished">{{post.date | date:'longDate'}}</span>.
+    </p>
+    <div itemprop="articleSection">
 
+      <!-- This is where Scully will inject the static HTML -->
+      <scully-content></scully-content>
+
+    </div>
   </div>
 
   <hr>
 
   <h4 itemprop="pageEnd">O conteúdo foi útil?</h4>
 
-</div>
+</article>
+
+<uig-footer></uig-footer>

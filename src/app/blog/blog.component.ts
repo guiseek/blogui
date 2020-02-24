@@ -1,5 +1,7 @@
 import { AfterViewChecked, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { Observable } from 'rxjs';
 import { HighlightService } from './../highlight.service';
 
 declare var ng: any;
@@ -13,15 +15,18 @@ declare var ng: any;
   providers: [HighlightService]
 })
 export class BlogComponent implements OnInit, AfterViewChecked {
+  post$: Observable<ScullyRoute>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private scully: ScullyRoutesService,
     private highlightService: HighlightService
   ) {
   }
 
-  ngOnInit(
-  ) { }
+  ngOnInit() {
+    this.post$ = this.scully.getCurrent();
+  }
 
   ngAfterViewChecked() {
     this.highlightService.highlightAll();

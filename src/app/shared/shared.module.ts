@@ -6,6 +6,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SignComponent } from './sign/sign.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SignComponent } from './sign/sign.component';
     NavbarComponent,
     NewsletterComponent,
     SignComponent,
-    LogoComponent
+    LogoComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { SignComponent } from './sign/sign.component';
     NavbarComponent,
     NewsletterComponent,
     SignComponent,
-    LogoComponent
+    LogoComponent,
+    FooterComponent
   ],
   entryComponents: [LogoComponent]
 })

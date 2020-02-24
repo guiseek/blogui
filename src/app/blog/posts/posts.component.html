@@ -10,10 +10,12 @@
     <h1>Posts</h1>
 
     <div class="row flex-spaces">
-      <div class="card" *ngFor="let post of links$ | async">
+      <div itemscope itemtype="http://schema.org/BlogPosting" class="card" *ngFor="let post of links$ | async">
         <div itemprop="blogPost" class="card-body">
-          <h4 itemprop="about" class="card-title">{{post.title}}</h4>
-          <h5 itemprop="author" class="card-subtitle">Guilherme Siquinelli</h5>
+          <h4 itemprop="headline" class="card-title">{{post.title}}</h4>
+          <h5 class="card-subtitle">
+            Escrito por <span itemprop="author">{{post.author}}</span> em <span itemprop="datePublished">{{post.date | date}}</span>
+          </h5>
           <p class="card-text">{{post.description}}</p>
           <a class="card-link" [routerLink]="post.route">Ver conteúdo</a>
           <!-- <a class="card-link" href="#">Second link</a> -->
@@ -22,3 +24,5 @@
     </div>
   </div>
 </div>
+
+<uig-footer></uig-footer>
