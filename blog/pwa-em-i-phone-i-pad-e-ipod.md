@@ -1,9 +1,16 @@
 ---
-title: 'PWA em iPhone iPad e Ipod'
-description: 'Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?'
-author: 'Guilherme Siquinelli'
-published: true
+title: PWA em iPhone iPad e Ipod
+description: Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?
+author: Guilherme Siquinelli
 date: 2020-02-20
+slug: pwa-em-i-phone-i-pad-e-ipod
+published: true
+keywords:
+  - angular
+  - pwa
+  - iphone
+  - ipad
+  - ipod
 ---
 
 Fala aí estudantes de tecnologia, bom dia, boa tarde, boa noite!
