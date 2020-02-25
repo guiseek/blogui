@@ -68,9 +68,9 @@
 */
 @mixin hr-after() {
   color: lighten($primary, 30%);
-  content: '~~~';
+  content: '/* ------------------------ */';
   display: block;
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: relative;
   text-align: center;
 }
