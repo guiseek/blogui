@@ -2,7 +2,7 @@
 title: Mono repositório full-stack com Angular e NestJS - Parte 2
 description: Atualizando um workspace monorepo para Angular 9
 author: Guilherme Siquinelli
-date: 2020-02-24
+date: 2020-02-25
 slug: monorepo-full-stack-com-angular-e-nestjs-parte-2-update-angular-9
 published: true
 keywords:
@@ -31,13 +31,13 @@ keywords:
 > Então, pode ser que para alguns já tenha sido instalado com a versão **9**, mesmo não tendo usado o `@latest`.
 > Quem já está com a **9**, não precisa executar os passos, porém, vale a pena conferir como funciona, _por este motivo colocarei aqui resultados relevantes retornados nos comandos executados._
 > Pra conferir basta abrir seu `package.json` em `dependencies`, abaixo vou mostrar um comparativo.
-
-
-
-| Versão 8 |        | Versão 9 |
-| ------ | ------ | ------ |
-| `"@nrwl/angular": "8.11.2",` <br> `"@angular/animations": "^8.2.0",` <br> `"@angular/common": "^8.2.0",` <br> `"@angular/compiler": "^8.2.0",` <br> `"@angular/core": "^8.2.0",` <br> `"@angular/forms": "^8.2.0",` <br> `"@angular/platform-browser": "^8.2.0",` <br> `"@angular/platform-browser-dynamic": "^8.2.0",` <br> `"@angular/router": "^8.2.0",` <br> `"core-js": "^2.5.4",` <br> `"rxjs": "~6.4.0",` <br> `"zone.js": "^0.9.1",` | e | `"@nrwl/angular": "9.0.2",` <br> `"@angular/animations": "^9.0.2",` <br> `"@angular/common": "^9.0.2",` <br> `"@angular/compiler": "^9.0.2",` <br> `"@angular/core": "^9.0.2",` <br> `"@angular/forms": "^9.0.2",` <br> `"@angular/platform-browser": "^9.0.2",` <br> `"@angular/platform-browser-dynamic": "^9.0.2",` <br> `"@angular/router": "^9.0.2",` <br> `"core-js": "^2.5.4",` <br> `"rxjs": "~6.5.4",` <br> `"zone.js": "^0.10.2",`
-| Antes  |        | Depois |
+>
+>
+> | Versão 8 |        | Versão 9 |
+> | ------ | ------ | ------ |
+> | `"@nrwl/angular": "8.11.2",` <br> `"@angular/animations": "^8.2.0",` <br> `"@angular/common": "^8.2.0",` <br> `"@angular/compiler": "^8.2.0",` <br> `"@angular/core": "^8.2.0",` <br> `"@angular/forms": "^8.2.0",` <br> `"@angular/platform-browser": "^8.2.0",` <br> `"@angular/platform-browser-dynamic": "^8.2.0",` <br> `"@angular/router": "^8.2.0",` <br> `"core-js": "^2.5.4",` <br> `"rxjs": "~6.4.0",` <br> `"zone.js": "^0.9.1",` | e | `"@nrwl/angular": "9.0.2",` <br> `"@angular/animations": "^9.0.2",` <br> `"@angular/common": "^9.0.2",` <br> `"@angular/compiler": "^9.0.2",` <br> `"@angular/core": "^9.0.2",` <br> `"@angular/forms": "^9.0.2",` <br> `"@angular/platform-browser": "^9.0.2",` <br> `"@angular/platform-browser-dynamic": "^9.0.2",` <br> `"@angular/router": "^9.0.2",` <br> `"core-js": "^2.5.4",` <br> `"rxjs": "~6.5.4",` <br> `"zone.js": "^0.10.2",`
+> | Antes  |        | Depois |
+>
 
 Também pode ser feito com
 ```bash

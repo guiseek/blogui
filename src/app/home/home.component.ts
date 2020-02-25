@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
         // map(posts => posts.sort((a, b) => toTime(a.date) - toTime(b.date))),
         map(posts => posts.sort( byDate ).reverse()),
         map(posts => {
+          console.table(posts)
           this.latest = posts[0];
           return posts;
         }),

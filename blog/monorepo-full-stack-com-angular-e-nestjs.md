@@ -2,7 +2,8 @@
 title: Mono repositório full-stack com Angular e NestJS
 description: Criando um workspace monorepo desde o inicio
 author: Guilherme Siquinelli
-date: 2020-02-24T00:00:00.000Z
+date: 2020-02-23
+updated: 2020-02-24
 slug: monorepo-full-stack-com-angular-e-nestjs
 published: true
 keywords:

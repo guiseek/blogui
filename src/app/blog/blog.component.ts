@@ -25,10 +25,11 @@ export class BlogComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    this.post$ = this.scully.getCurrent();
+
   }
 
   ngAfterViewChecked() {
+    this.post$ = this.scully.getCurrent();
     this.highlightService.highlightAll();
   }
 }
