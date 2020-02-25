@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { HighlightService } from './../shared/services/highlight.service';
+import { BlogPost } from '../shared/models';
 
 declare var ng: any;
 
@@ -15,7 +16,7 @@ declare var ng: any;
   // providers: [HighlightService]
 })
 export class BlogComponent implements OnInit, AfterViewChecked {
-  post$: Observable<ScullyRoute>;
+  post$: Observable<BlogPost>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -25,11 +26,10 @@ export class BlogComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-
+    this.post$ = this.scully.getCurrent();
   }
 
   ngAfterViewChecked() {
-    this.post$ = this.scully.getCurrent();
     this.highlightService.highlightAll();
   }
 }

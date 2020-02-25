@@ -1,0 +1,14 @@
+<!-- <div itemscope itemtype="http://schema.org/BlogPosting"> -->
+<ng-container *ngIf="post.cover">
+  <img [src]="post.cover" [attr.alt]="post.name">
+</ng-container>
+<a itemscope itemtype="http://schema.org/BlogPosting" class="card-body" [routerLink]="post.route">
+  <h4 itemprop="name headline" class="card-title">{{post.title}}</h4>
+  <meta itemprop="author" [attr.content]="post.author">
+  <meta itemprop="datePublished" [attr.content]="post.date">
+  <meta *ngIf="post.updated" itemprop="dateModified" [attr.content]="post.updated">
+  <!-- <h5 class="card-subtitle">{{post.author}}</h5> -->
+  <p class="card-text">{{post.description}}</p>
+  <em>{{post.author}} em {{post.date | date}}</em>
+</a>
+<!-- </div> -->

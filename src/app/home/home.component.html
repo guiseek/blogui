@@ -7,29 +7,36 @@
 <div id="top" class="row site">
   <div class="sm-12 md-8 col">
 
-    <article itemscope itemtype="http://schema.org/Article" id="top" class="site">
-      <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper"
-        *ngIf="!!latest">
+    <ng-container *ngIf="!!latest">
+      <article itemscope itemtype="http://schema.org/Article" id="top" class="site">
+        <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper">
 
-        <h3 itemprop="headline">
-          <a [routerLink]="latest.route">{{latest.title}}</a>
-        </h3>
-        <div class="text-muted">
-          Escrito por <a itemprop="author" routerLink="/sobre">{{latest.author}}</a> em <span
-            itemprop="datePublished">{{latest.date | date:'longDate'}}</span>.
+          <h3 itemprop="headline">
+            <a [routerLink]="latest.route">{{latest.title}}</a>
+          </h3>
+          <div class="text-muted">
+            Escrito por <a itemprop="author" routerLink="/sobre">{{latest.author}}</a> em <span
+              itemprop="datePublished">{{latest.date | date:'longDate'}}</span>.
+          </div>
+          <p>{{latest.description}}</p>
         </div>
-        <p>{{latest.description}}</p>
-      </div>
 
-      <div class="row flex-center">
-        <img class="no-border" src="/assets/images/new-content.svg" alt="Conteúdo novo">
-      </div>
-    </article>
+        <div class="row flex-center">
+          <img class="no-border" src="/assets/images/new-content.svg" alt="Conteúdo novo">
+        </div>
+      </article>
+    </ng-container>
 
+    <div class="row">
+      <div class="col col-6" *ngFor="let post of links$ | async">
+        <uig-post-card [post]="post"></uig-post-card>
+      </div>
+    </div>
     <div class="paper">
 
-      <h3>Tecnologias</h3>
 
+      <h3>Conteúdo abordado</h3>
+      <!--
       <div class="row flex-spaces">
         <div class="sm-3 col margin">
           <img class="rounded shadow" src="/assets/logos/angular.svg" alt="Angular">
@@ -41,10 +48,25 @@
           <img class="rounded shadow" src="/assets/logos/nestjs.svg" alt="Angular">
         </div>
       </div>
-      <hr>
+      <hr> -->
       <section>
 
-        <table class="table-hover">
+        <uig-table [columns]="techColumns" [dataSource]="techDataSource">
+
+          <ng-container cdkColumnDef="docs">
+            <th cdk-header-cell *cdkHeaderCellDef> Docs </th>
+            <td cdk-cell *cdkCellDef="let element">
+              <a [attr.href]="element.docs" target="_blank" [attr.aria-label]="element.name">
+                Docs
+              </a>
+            </td>
+          </ng-container>
+
+          <tr cdk-header-row *cdkHeaderRowDef="['name','desc','docs']"></tr>
+          <tr cdk-row *cdkRowDef="let row; columns: ['name','desc','docs'];"></tr>
+        </uig-table>
+
+        <!-- <table class="table-hover">
           <thead>
             <tr>
               <th>Tech</th>
@@ -63,7 +85,7 @@
               </td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
       </section>
 
     </div>

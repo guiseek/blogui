@@ -1,3 +1,6 @@
+import { byDate } from './../../shared/utils/date.utils';
+import { BlogPost } from './../../shared/models/post.model';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
@@ -14,15 +17,19 @@ export class PostsComponent implements OnInit {
 
   constructor(
     private scully: ScullyRoutesService,
-    private highlight: HighlightService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     // debug current pages
     this.links$ = this.scully.available$
       .pipe(
-        map(links => links.filter((link => !!link && link.published)))
+        map(links => links.filter((link => !!link && link.published))),
+        map(posts => posts.sort(byDate).reverse()),
       );
   }
-
+  onRead(post: BlogPost) {
+    console.log(post);
+    this.router.navigateByUrl(post.route);
+  }
 }

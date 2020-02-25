@@ -5,6 +5,7 @@ author: Guilherme Siquinelli
 date: 2020-02-25
 slug: monorepo-full-stack-com-angular-e-nestjs-parte-2-update-angular-9
 published: true
+cover: /assets/images/monorepo-cover.svg
 keywords:
   - angular
   - nestjs

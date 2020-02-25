@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve -o",
     "build": "ng build",
     "prod": "ng build blogui --buildOptimizer --extractCss --extractLicenses --no-namedChunks --optimization --outputHashing=all --no-sourceMap --no-vendorChunk",
     "test": "ng test",
@@ -20,6 +20,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.2",
+    "@angular/cdk": "^9.1.0",
     "@angular/common": "~9.0.2",
     "@angular/compiler": "~9.0.2",
     "@angular/core": "~9.0.2",

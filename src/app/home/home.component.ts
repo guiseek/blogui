@@ -1,16 +1,10 @@
+import { TechDataSource } from './../shared/services/tech.datasource';
 import { Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { Tech } from './../shared/models/tech.model';
-import { TechService } from './../shared/services/tech.service';
+import { map, tap, take } from 'rxjs/operators';
+import { byDate } from '../shared/utils';
 
-const toTime = (date: string) => {
-  return new Date(date).getTime();
-};
-const byDate = (a: ScullyRoute, b: ScullyRoute) => {
-  return toTime(a.date) - toTime(b.date);
-};
 
 @Component({
   selector: 'uig-home',
@@ -20,31 +14,24 @@ const byDate = (a: ScullyRoute, b: ScullyRoute) => {
 export class HomeComponent implements OnInit {
   links$: Observable<ScullyRoute[]>;
   latest: ScullyRoute = null;
-  tech$: Observable<Tech[]>;
+  techColumns = [
+    { view: 'Nome', value: 'name' },
+    { view: 'Desc', value: 'desc' },
+    // { view: 'Docs', value: 'docs' }
+  ];
+  public techDataSource = new TechDataSource();
   constructor(
     private scully: ScullyRoutesService,
-    private tech: TechService
+    // private tech: TechService
   ) { }
 
   ngOnInit(): void {
-    // debug current pages
     this.links$ = this.scully.available$
       .pipe(
+        take(1),
         map(links =>
           links.filter(link => link.published)),
-        // map(posts => posts.sort((a, b) => toTime(a.date) - toTime(b.date))),
-        map(posts => posts.sort( byDate ).reverse()),
-        map(posts => {
-          console.table(posts)
-          this.latest = posts[0];
-          return posts;
-        }),
-        tap(a => {
-          console.log(a);
-        })
+        map(posts => posts.sort(byDate).reverse()),
       );
-
-    this.tech$ = this.tech.items$;
   }
-
 }

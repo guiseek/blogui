@@ -1,0 +1,14 @@
+<table cdk-table [dataSource]="dataSource">
+
+  <ng-content></ng-content>
+
+  <ng-template ngFor let-item [ngForOf]="columns">
+
+    <ng-container [cdkColumnDef]="item.value">
+      <th cdk-header-cell *cdkHeaderCellDef> {{item.view}} </th>
+      <td cdk-cell *cdkCellDef="let element"> {{element[item.value]}} </td>
+    </ng-container>
+
+  </ng-template>
+
+</table>

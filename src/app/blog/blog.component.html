@@ -4,33 +4,36 @@
 
 </uig-navbar>
 
-<article itemscope itemtype="http://schema.org/Article" id="top" class="site">
+<section id="top" class="site" *ngIf="post$ | async as post;">
 
-  <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper">
+  <article itemscope itemtype="http://schema.org/BlogPosting" class="paper">
 
-    <ng-container *ngIf="post$ | async as post;">
-      <h1 itemprop="headline" class="article-title">
-        <a [routerLink]="post.route">{{post.title}}</a>
-      </h1>
+    <!-- <ng-container *ngIf="post.cover">
+      <img [src]="post.cover" [attr.alt]="post.name">
+    </ng-container> -->
 
-      <p class="article-meta">
-        Escrito por <a itemprop="author" href="#">{{post.author}}</a> em <span
-          itemprop="datePublished">{{post.date | date:'longDate'}}</span>.
-      </p>
-    </ng-container>
+    <h1 itemprop="name headline" class="article-title">
+      <a itemprop="mainEntityOfPage url" [routerLink]="post.route">{{post.title}}</a>
+    </h1>
+    <meta itemprop="author" [attr.content]="post.author">
+    <meta itemprop="datePublished" [attr.content]="post.date">
+    <meta *ngIf="post.updated" itemprop="dateModified" [attr.content]="post.updated">
 
-    <div itemprop="articleSection">
+    <p class="article-meta">
+      Escrito por <span>{{post.author}}</span> em <span>{{post.date | date:'longDate'}}</span>.
+    </p>
 
-      <!-- This is where Scully will inject the static HTML -->
-      <scully-content></scully-content>
+    <!-- <p class="text-lead">{{post.description}}</p> -->
 
-    </div>
-  </div>
+    <!-- This is where Scully will inject the static HTML -->
+    <scully-content></scully-content>
 
-  <hr>
+  </article>
 
-  <h4 itemprop="pageEnd">O conteúdo foi útil?</h4>
+  <!-- <hr> -->
 
-</article>
+  <!-- <h4 itemprop="pageEnd">O conteúdo foi útil?</h4> -->
+
+</section>
 
 <uig-footer></uig-footer>

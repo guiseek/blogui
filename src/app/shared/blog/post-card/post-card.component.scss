@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  a.card-body {
+    display: block;
+    background-image: none;
+    a {
+      opacity: 0.5;
+      background-image: none;
+    }
+    em {
+      opacity: 0.5;
+    }
+  }
+}
