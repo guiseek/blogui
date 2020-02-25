@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
         map(links =>
           links.filter(link => link.published)),
         map(posts => posts.sort(byDate).reverse()),
+        tap(console.log)
       );
   }
 }

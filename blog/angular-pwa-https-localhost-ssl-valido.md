@@ -3,11 +3,17 @@ title: Angular PWA HTTPS localhost SSL válido
 description: blog description
 author: Guilherme Siquinelli
 date: 2020-02-23
+slug: angular-https-localhost-certificado-valido
 slugs:
   - pwa-ssl-valido
   - pwa-com-certificado-ssl-valido-em-desenvolvimento
   - angular-https-localhost-certificado-valido
 published: true
+keywords:
+  - angular
+  - pwa
+  - https
+  - ssl
 ---
 
 Com um projeto criado, seja `Vanilla`, `Angular`, `React`, `Vue`, `Svelte`, `Node`, `Express`, `NestJS`... podemos criar os certificados usando os comandos a seguir:
