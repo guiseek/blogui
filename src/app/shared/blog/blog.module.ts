@@ -3,16 +3,17 @@ import { SharedModule } from './../shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostCardComponent } from './post-card/post-card.component';
+import { PostHeaderComponent } from './post-header/post-header.component';
 
 
 
 @NgModule({
-  declarations: [PostCardComponent],
+  declarations: [PostCardComponent, PostHeaderComponent],
   imports: [
     CommonModule,
     RouterModule,
     SharedModule
   ],
-  exports: [PostCardComponent]
+  exports: [PostCardComponent, PostHeaderComponent]
 })
 export class SharedBlogModule { }

@@ -1,9 +1,10 @@
-import { AfterViewChecked, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HighlightService } from './../shared/services/highlight.service';
 import { BlogPost } from '../shared/models';
+import { takeUntil, tap } from 'rxjs/operators';
 
 declare var ng: any;
 
@@ -12,8 +13,7 @@ declare var ng: any;
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated,
-  // providers: [HighlightService]
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class BlogComponent implements OnInit, AfterViewChecked {
   post$: Observable<BlogPost>;
@@ -23,13 +23,22 @@ export class BlogComponent implements OnInit, AfterViewChecked {
     private scully: ScullyRoutesService,
     private highlightService: HighlightService
   ) {
+    // this.post$ = this.scully.getCurrent()
+    //   .pipe(
+    //     tap(console.log)
+    //   )
   }
 
-  ngOnInit() {
-    this.post$ = this.scully.getCurrent();
+  ngOnInit(): void {
+
   }
 
   ngAfterViewChecked() {
+    this.post$ = this.scully.getCurrent()
+    .pipe(
+      tap(console.log)
+    );
+    // this.post$.pipe(takeUntil(this.destroy$)).subscribe();
     this.highlightService.highlightAll();
   }
 }

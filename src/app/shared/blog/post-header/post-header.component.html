@@ -1,0 +1,12 @@
+<ng-container *ngIf="post">
+  <h1 itemprop="name headline" class="article-title">
+    <a itemprop="mainEntityOfPage url" [routerLink]="post.route">{{post.title}}</a>
+  </h1>
+  <meta itemprop="author" [attr.content]="post.author">
+  <meta itemprop="datePublished" [attr.content]="post.date">
+  <meta *ngIf="post.updated" itemprop="dateModified" [attr.content]="post.updated">
+
+  <p class="article-meta">
+    Escrito por <span>{{post.author}}</span> em <span>{{post.date | date:'longDate'}}</span>.
+  </p>
+</ng-container>
