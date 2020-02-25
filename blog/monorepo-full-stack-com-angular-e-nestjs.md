@@ -6,6 +6,7 @@ date: 2020-02-23
 updated: 2020-02-24
 slug: monorepo-full-stack-com-angular-e-nestjs
 published: true
+cover: /assets/images/monorepo-cover.svg
 keywords:
   - angular
   - nestjs

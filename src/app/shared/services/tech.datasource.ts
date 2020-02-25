@@ -1,0 +1,101 @@
+import { Tech } from './../models/tech.model';
+import { DataSource } from '@angular/cdk/table';
+import { BehaviorSubject, Observable } from 'rxjs';
+
+const TECH_ELEMENTS = [
+  {
+    logo: 'angular.svg',
+    docs: 'https://angular.io',
+    name: 'Angular',
+    desc: 'Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript liderado pela Equipe Angular do Google e por uma comunidade de indivíduos e corporações.'
+  },
+  {
+    logo: 'pwa.svg',
+    docs: 'https://www.w3.org/TR/appmanifest',
+    name: 'PWA',
+    desc: 'Progressive Web App é uma metodologia de desenvolvimento de software. Um Progressive Web App pode ser visto como uma evolução híbrida entre as páginas da web regulares e um aplicativo móvel.'
+  },
+  {
+    logo: 'ionic.svg',
+    docs: 'https://ionicframework.com',
+    name: 'Ionic',
+    desc: 'O Ionic é um SDK de código aberto completo para o desenvolvimento de aplicativos móveis híbridos. Diferente do PWA é gerado um apk com a ajuda do Apache Cordova.'
+  },
+  {
+    logo: 'npm.svg',
+    docs: 'https://npmjs.com',
+    name: 'NPM',
+    desc: 'O npm é um gerenciador de pacotes para a linguagem de programação JavaScript. É o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js.'
+  },
+  {
+    logo: 'html.svg',
+    docs: 'https://www.w3.org/TR/html52',
+    name: 'HTML',
+    desc: 'HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.'
+  },
+  {
+    logo: 'css.svg',
+    docs: 'https://www.w3.org/TR/css',
+    name: 'CSS',
+    desc: 'Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web.'
+  },
+  {
+    logo: 'js.svg',
+    docs: 'https://www.w3.org/standards/webdesign/script',
+    name: 'Javascript',
+    desc: 'JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multi-paradigma.'
+  },
+  {
+    logo: 'ts.svg',
+    docs: 'http://www.typescriptlang.org',
+    name: 'Typescript',
+    desc: 'TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem.'
+  },
+  {
+    logo: 'nodejs.svg',
+    docs: 'https://nodejs.org/',
+    name: 'NodeJS',
+    desc: 'Node.js é um interpretador de JavaScript assíncrono com código aberto orientado a eventos.'
+  },
+  {
+    logo: 'nestjs.svg',
+    docs: 'https://nestjs.com',
+    name: 'NestJS',
+    desc: 'O NestJS é uma estrutura para criar aplicativos da web Node.js. É construído com TypeScript e combina elementos de OOP (Programação Orientada a Objetos), FP (Programação Funcional) e FRP (Programação Reativa Funcional).'
+  },
+  {
+    logo: 'firebase.svg',
+    docs: 'https://firebase.com',
+    name: 'Firebase',
+    desc: 'O Firebase é uma plataforma de desenvolvimento de aplicativos móveis e da Web desenvolvida pela Firebase, Inc. em 2011 e adquirida pelo Google em 2014.'
+  },
+  {
+    logo: 'nx.svg',
+    docs: 'https://firebase.com',
+    name: 'NX Workspaces',
+    desc: 'O Nx é um conjunto de ferramentas de desenvolvimento extensíveis para monorepos, que te ajudam a desenvolver como Google, Facebook e Microsoft. Possui suporte de primeira classe para muitas tecnologias de front-end e back-end, portanto, sua documentação é oferecida em vários tipos.'
+  }
+];
+
+export class TechDataSource extends DataSource<Tech> {
+  /** Stream of data that is provided to the table. */
+  data = new BehaviorSubject<Tech[]>(TECH_ELEMENTS);
+
+  /** Connect function called by the table to retrieve one stream containing the data to render. */
+  connect(): Observable<Tech[]> {
+    return this.data;
+  }
+
+  filter(query: string) {
+    if (query) {
+      this.data.next(
+        this.data.value.filter((item) => {
+          return item.name.toLowerCase()
+            .indexOf(query.toLowerCase()) > -1;
+        })
+      );
+    }
+  }
+
+  disconnect() { }
+}
