@@ -16,7 +16,8 @@ keywords:
 
 ### Neste conteúdo vamos ver como pode ser rápido inicar um projeto full-stack com Angular e NestJS com ferramentas ainda pouco utilizadas no mercado, com um potêncial incrível!
 
-> **NOTA** Com certeza essa ou outras ferramentas com o mesmo nível de agilidade, somando seu poder de gerenciamento para aplicações e bibliotécas compartilhadas serão adotadas pelo mercado.
+> **NOTA**
+> Com certeza essa ou outras ferramentas com o mesmo nível de agilidade, somando seu poder de gerenciamento para aplicações e bibliotécas compartilhadas serão adotadas pelo mercado.
 
 ### Vamos ver do que eu estou falando.
 
@@ -37,7 +38,8 @@ Então, selecione `angular-nest`
   next.js           [a workspace with a single Next.js application]
 ```
 
-> **NOTA** Poderíamos iniciar um projeto limpo ou com qualquer uma das opções apresentadas, vamos seguir com `angular-nest`. Outros apps podem ser adicionados conforme o cresce.
+> **NOTA**
+> Poderíamos iniciar um projeto limpo ou com qualquer uma das opções apresentadas, vamos seguir com `angular-nest`. Outros apps podem ser adicionados conforme o cresce.
 
 Em seguida você tem que preencher o nome do seu `app frontend angular`, vou usar `webapp`.
 
@@ -70,7 +72,8 @@ Acesso o diretório do projeto criado
 cd nx-pro
 ```
 
-> **Recomendo** abra o projeto no VSCode ou seu editor preferido.
+> **Recomendo**
+> Abra o projeto no VSCode ou seu editor preferido.
 
 Podemos ver alguns schematics e builders disponíveis no projeto
 
@@ -150,12 +153,13 @@ Prático, não?
 
 Este será uma série de posts relacionados, no próximo vamos criar uma biliotéca compartilhada e comentar alguns `patterns` relacionados, ok?
 
-> **Update**: _Adicionei um passo já como sendo segundo, pois vou mostrar como vamos migrar a versão do workspace para o **Angular 9**, assim aproveitamos pra usar novas feature dentro desse projeto._
+> **Update**:
+_Adicionei um passo já como sendo segundo, pois vou mostrar como vamos migrar a versão do workspace para o **Angular 9**, assim aproveitamos pra usar novas feature dentro desse projeto._
 >
 > Vou mostrar como funciona o `nx migrate` na prática.
 
-### @TODO
-1. [Mono repositório full-stack com Angular e NestJS](/blog/monorepo-full-stack-com-angular-e-nestjs)
-2. Migrando workspace para _Angular 9_
-3. Compartilhando código e criando bibliotécas
+### Série: _Mono repositório full-stack com Angular e NestJS_
+1. [Criando um workspace monorepo desde o inicio - Parte 1](/blog/monorepo-full-stack-com-angular-e-nestjs)
+2. [Atualizando um workspace monorepo para Angular 9 - Parte 2](/blog/monorepo-full-stack-com-angular-e-nestjs-parte-2-update-angular-9)
+3. Compartilhando código e criando bibliotecas
 4. Gráfico de dependências, tasks `affected:*`
