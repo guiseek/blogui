@@ -4,7 +4,8 @@
 // @import '~prismjs/plugins/toolbar/prism-toolbar.css';
 /* check node_modules/prismjs/themes/ for the available themes */
 @import "~prismjs/themes/prism-coy";
-@import "~papercss/dist/paper.min";
+// @import "~papercss/dist/paper.min";
+@import "./styles/themes/paper/paper.theme";
 
 @import "styles/mixins";
 
@@ -18,7 +19,7 @@ $gray: #41403e;
 
 body {
   display: block;
-  background-image: url("/assets/images/geometry-pattern.png");
+  // background-image: url("/assets/images/geometry-pattern.png");
   padding-top: 70px;
 }
 #top {
