@@ -1,6 +1,24 @@
 # Blogui
 
 
+<!-- Util -->
+
+
+```text
+dist/
+┣ scully-blog/
+┃ ┣ favicon.ico
+┃ ┣ ...
+┃ ┗ vendor-es5.js.map
+┗ static/
+  ┣ assets/
+  ┃ ┗ scully-routes.json
+  ┣ favicon.ico
+  ┣ ...
+  ┗ vendor-es5.js.map
+```
+
+
 Markdown Quick Reference
 ========================
 

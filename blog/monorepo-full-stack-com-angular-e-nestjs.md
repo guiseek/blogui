@@ -7,6 +7,11 @@ slug: monorepo-full-stack-com-angular-e-nestjs
 published: true
 keywords:
   - angular
+  - nestjs
+  - monorepo
+  - workspace
+  - nx
+  - full-stack
 ---
 
 ### Neste conteúdo vamos ver como pode ser rápido inicar um projeto full-stack com Angular e NestJS com ferramentas ainda pouco utilizadas no mercado, com um potêncial incrível!
@@ -145,8 +150,12 @@ Prático, não?
 
 Este será uma série de posts relacionados, no próximo vamos criar uma biliotéca compartilhada e comentar alguns `patterns` relacionados, ok?
 
+> **Update**: _Adicionei um passo já como sendo segundo, pois vou mostrar como vamos migrar a versão do workspace para o **Angular 9**, assim aproveitamos pra usar novas feature dentro desse projeto._
+>
+> Vou mostrar como funciona o `nx migrate` na prática.
 
 ### @TODO
 1. [Mono repositório full-stack com Angular e NestJS](/blog/monorepo-full-stack-com-angular-e-nestjs)
-2. Compartilhando código e criando bibliotécas
-3. Gráfico de dependências, tasks `affected:*`
+2. Migrando workspace para _Angular 9_
+3. Compartilhando código e criando bibliotécas
+4. Gráfico de dependências, tasks `affected:*`

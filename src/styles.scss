@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* include CSS for prism toolbar */
-// @import '~prismjs/plugins/toolbar/prism-toolbar.css';
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
 /* check node_modules/prismjs/themes/ for the available themes */
-@import "~prismjs/themes/prism-coy";
+@import "~prismjs/themes/prism-tomorrow.css";
 // @import "~papercss/dist/paper.min";
 @import "./styles/themes/paper/paper.theme";
 
