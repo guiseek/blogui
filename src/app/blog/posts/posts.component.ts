@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { HighlightService } from './../../shared/services/highlight.service';
 
 @Component({
   selector: 'uig-posts',
@@ -11,7 +12,10 @@ import { map } from 'rxjs/operators';
 export class PostsComponent implements OnInit {
   links$: Observable<ScullyRoute[]>;
 
-  constructor(private scully: ScullyRoutesService) { }
+  constructor(
+    private scully: ScullyRoutesService,
+    private highlight: HighlightService
+  ) { }
 
   ngOnInit(): void {
     // debug current pages

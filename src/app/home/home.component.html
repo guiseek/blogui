@@ -12,17 +12,17 @@
         *ngIf="!!latest">
 
         <h3 itemprop="headline">
-          <a href="#">{{latest.title}}</a>
+          <a [routerLink]="latest.route">{{latest.title}}</a>
         </h3>
         <div class="text-muted">
-          Escrito por <a itemprop="author" href="#">{{latest.author}}</a> em <span
+          Escrito por <a itemprop="author" routerLink="/sobre">{{latest.author}}</a> em <span
             itemprop="datePublished">{{latest.date | date:'longDate'}}</span>.
         </div>
         <p>{{latest.description}}</p>
       </div>
 
       <div class="row flex-center">
-        <img class="no-border" src="/assets/images/new-content.svg" alt="">
+        <img class="no-border" src="/assets/images/new-content.svg" alt="Conteúdo novo">
       </div>
     </article>
 

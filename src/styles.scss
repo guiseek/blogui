@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* include CSS for prism toolbar */
-// @import '~prismjs/plugins/toolbar/prism-toolbar.css';
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
 /* check node_modules/prismjs/themes/ for the available themes */
-@import "~prismjs/themes/prism-coy";
+@import "~prismjs/themes/prism-tomorrow.css";
 // @import "~papercss/dist/paper.min";
 @import "./styles/themes/paper/paper.theme";
 
@@ -31,6 +31,7 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  overflow-x: scroll;
 }
 blockquote:before {
   color: $blue;
@@ -41,33 +42,15 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 blockquote > p {
-  display: inline-block;
+  display: block;
 }
 blockquote strong {
+  font-size: 1.6rem;
   display: inline-block;
   color: $blue;
 }
 
-// blockquote {
-//   color: $gray;
-//   background-color: #f5f0c6;
-//   border-color: #ddcd45;
-//   border-left-width: 4px;
-//   border-bottom-left-radius: 15px 255px;
-//   border-bottom-right-radius: 225px 15px;
-//   border-top-left-radius: 255px 15px;
-//   border-top-right-radius: 15px 225px;
-//   border: 2px solid #41403e;
-//   margin-bottom: 20px;
-//   padding: 15px;
-//   width: 100%;
-//   strong:first-of-type {
-//     display: block;
-//     text-transform: uppercase;
-//     font-size: 15px;
-//     font-weight: 700;
-//   }
-// }
+
 .paper > h1,
 h2,
 h3,

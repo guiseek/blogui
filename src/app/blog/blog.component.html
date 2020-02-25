@@ -6,17 +6,19 @@
 
 <article itemscope itemtype="http://schema.org/Article" id="top" class="site">
 
-  <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper"
-    *ngIf="post$ | async as post;">
+  <div itemprop="articleSection" itemscope itemtype="http://schema.org/BlogPosting" class="paper">
 
-    <h1 itemprop="headline" class="article-title">
-      <a href="#">{{post.title}}</a>
-    </h1>
+    <ng-container *ngIf="post$ | async as post;">
+      <h1 itemprop="headline" class="article-title">
+        <a [routerLink]="post.route">{{post.title}}</a>
+      </h1>
 
-    <p class="article-meta">
-      Escrito por <a itemprop="author" href="#">{{post.author}}</a> em <span
-        itemprop="datePublished">{{post.date | date:'longDate'}}</span>.
-    </p>
+      <p class="article-meta">
+        Escrito por <a itemprop="author" href="#">{{post.author}}</a> em <span
+          itemprop="datePublished">{{post.date | date:'longDate'}}</span>.
+      </p>
+    </ng-container>
+
     <div itemprop="articleSection">
 
       <!-- This is where Scully will inject the static HTML -->
